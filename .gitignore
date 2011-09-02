@@ -1,5 +1,5 @@
 .metadata
-.bin
-.bin-debug
-thumbs.db
-
+*/bin/
+*/bin-debug/
+*/bin-release/
+*/thumbs.db
