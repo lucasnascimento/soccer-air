@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
-  <includeClasses/>
+  <includeClasses>
+    <classEntry path="soccer.model.SoccerClubVO"/>
+    <classEntry path="soccer.model.ManagerVO"/>
+    <classEntry path="soccer.utils.SoccerClubXMLReaderUtil"/>
+  </includeClasses>
   <includeResources/>
   <namespaceManifests/>
 </flexLibProperties>

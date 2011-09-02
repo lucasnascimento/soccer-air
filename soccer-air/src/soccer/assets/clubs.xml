@@ -1,0 +1,261 @@
+﻿<!-- http://en.wikipedia.org/wiki/List_of_association_football_clubs -->
+<soccerClubs>
+    <association name="caf" location="Africa">
+        <country name="Algeria">
+            <club name="MC Alger" location="Algiers">
+                <icon>MCA.png</icon>
+                <info>http://en.wikipedia.org/wiki/MC_Alger</info>
+            </club>
+            <club name="USM Alger" location="Algiers">
+                <icon>USM_Alger.png</icon>
+                <info>http://en.wikipedia.org/wiki/USM_Alger</info>
+            </club>
+            <club name="CA Batna" location="Batna">
+                <icon>CA_Batna.jpg</icon>
+                <info>http://en.wikipedia.org/wiki/CA_Batna</info>
+            </club>
+            <club name="JSM Béjaïa" location="Béjaïa">
+                <icon>JSMB.png</icon>
+                <info>http://en.wikipedia.org/wiki/JSM_B%C3%A9ja%C3%AFa</info>
+            </club>
+            <club name="CR Belouizdad" location="Algiers">
+                <icon>CR_Belouizdad.png</icon>
+                <info>http://en.wikipedia.org/wiki/CR_Belouizdad</info>
+            </club>
+            <club name="ASO Chlef" location="Chlef">
+                <icon>ASO_Chlef.png</icon>
+                <info>http://en.wikipedia.org/wiki/ASO_Chlef</info>
+            </club>
+            <club name="CS Constantine" location="Constantine">
+                <icon>CS_Constantine.gif</icon>
+                <info>http://en.wikipedia.org/wiki/CS_Constantine</info>
+            </club>
+            <club name="MC El Eulma" location="El Eulma">
+                <icon>MC_El_Eulma.png</icon>
+                <info>http://en.wikipedia.org/wiki/MC_El_Eulma</info>
+            </club>
+            <club name="USM El Harrach" location="Algiers">
+                <icon>USM_El_Harrach.png</icon>
+                <info>http://en.wikipedia.org/wiki/USM_El_Harrach</info>
+            </club>
+            <club name="NA Hussein Dey" location="Algiers">
+                <icon>NA_Hussein_Dey.png</icon>
+                <info>http://en.wikipedia.org/wiki/NA_Hussein_Dey</info>
+            </club>
+            <club name="JS Kabylie" location="Tizi Ouzou">
+                <icon>JS_Kabylie.png</icon>
+                <info>http://en.wikipedia.org/wiki/JS_Kabylie</info>
+            </club>
+            <club name="AS Khroub" location="El Khroub">
+                <icon>AS_Khroub.png</icon>
+                <info>http://en.wikipedia.org/wiki/AS_Khroub</info>
+            </club>
+            <club name="MC Oran" location="Oran">
+                <icon>MC_Oran.jpg</icon>
+                <info>http://en.wikipedia.org/wiki/MC_Oran</info>
+            </club>
+            <club name="MC Saïda" location="Saïda">
+                <icon>mc_saida.jpg</icon>
+                <info>http://en.wikipedia.org/wiki/MC_Sa%C3%AFda</info>
+            </club>
+            <club name="ES Sétif" location="Sétif">
+                <icon>ES_Setif.png</icon>
+                <info>http://en.wikipedia.org/wiki/ES_S%C3%A9tif</info>
+            </club>
+            <club name="WA Tlemcen" location="Tlemcen">
+                <icon>WA_Tlemcen.png</icon>
+                <info>http://en.wikipedia.org/wiki/WA_Tlemcen</info>
+            </club>
+        </country>
+    </association>
+    <association name="uefa" location="Europa">
+        <country name="England">
+            <club name="Arsenal F.C." location="London">
+                <icon>Arsenal_FC.png</icon>
+                <info>http://en.wikipedia.org/wiki/Arsenal_F.C.</info>
+            </club>
+            <club name="Aston Villa F.C." location="Birmingham">
+                <icon>Aston_Villa.png</icon>
+                <info>http://en.wikipedia.org/wiki/Aston_Villa_F.C.</info>
+            </club>
+            <club name="Chelsea F.C." location="London">
+                <icon>Chelsea_FC.png</icon>
+                <info>http://en.wikipedia.org/wiki/Chelsea_F.C.</info>
+            </club>
+            <club name="Liverpool F.C." location="Liverpool">
+                <icon>Liverpool_FC.png</icon>
+                <info>http://en.wikipedia.org/wiki/Liverpool_F.C.</info>
+            </club>
+            <club name="Manchester City F.C." location="Manchester">
+                <icon>Manchester_City.png</icon>
+                <info>http://en.wikipedia.org/wiki/Manchester_City_F.C.</info>
+            </club>
+            <club name="Manchester United F.C." location="Manchester">
+                <icon>Manchester_United_FC.png</icon>
+                <info>http://en.wikipedia.org/wiki/Manchester_United_F.C.</info>
+            </club>
+            <club name="Tottenham Hotspur F.C." location="London">
+                <icon>Tottenham_Hotspur.png</icon>
+                <info>http://en.wikipedia.org/wiki/Tottenham_Hotspur_F.C.</info>
+            </club>
+        </country>
+        <country name="França">
+            <club name="Olympique Lyonnais" location="Lyon">
+                <icon>Olympique_lyonnais.png</icon>
+                <info>http://en.wikipedia.org/wiki/Olympique_Lyonnais</info>
+            </club>
+        </country>
+        <country name="Alemanha">
+            <club name="Bayer 04 Leverkusen" location="Leverkusen">
+                <icon>Bayer_Leverkusen.png</icon>
+                <info>http://en.wikipedia.org/wiki/Bayer_04_Leverkusen</info>
+            </club>
+            <club name="FC Bayern Munich" location="Munich">
+                <icon>Bayern_Munchen.png</icon>
+                <info>http://en.wikipedia.org/wiki/FC_Bayern_Munich</info>
+            </club>
+            <club name="Borussia Dortmund" location="Dortmund">
+                <icon>Borussia_Dortmund.png</icon>
+                <info>http://en.wikipedia.org/wiki/Borussia_Dortmund</info>
+            </club>
+            <club name="VfL Wolfsburg" location="Wolfsburg">
+                <icon>Vfl_Wolfsburg.png</icon>
+                <info>http://en.wikipedia.org/wiki/VfL_Wolfsburg</info>
+            </club>
+            <club name="FC Schalke 04" location="Gelsenkirchen">
+                <icon>Schalke_04.png</icon>
+                <info>http://en.wikipedia.org/wiki/FC_Schalke_04</info>
+            </club>
+        </country>
+        <country name="Itália">
+            <club name="ACF Fiorentina" location="Florence">
+                <icon>ACF_Fiorentina.png</icon>
+                <info>http://en.wikipedia.org/wiki/ACF_Fiorentina</info>
+            </club>
+            <club name="F.C. Internazionale Milano" location="Milan">
+                <icon>Internazionale.png</icon>
+                <info>http://en.wikipedia.org/wiki/F.C._Internazionale_Milano</info>
+            </club>
+            <club name="Juventus F.C." location="Turin">
+                <icon>Juventus_F.C.png</icon>
+                <info>http://en.wikipedia.org/wiki/Juventus_F.C.</info>
+            </club>
+            <club name="S.S. Lazio" location="Rome">
+                <icon>SS_Lazio.png</icon>
+                <info>http://en.wikipedia.org/wiki/S.S._Lazio</info>
+            </club>
+            <club name="A.C. Milan" location="Milan">
+                <icon>AC_Milan.png</icon>
+                <info>http://en.wikipedia.org/wiki/A.C._Milan</info>
+            </club>
+            <club name="A.S. Roma" location="Rome">
+                <icon>AS_Roma.png</icon>
+                <info>http://en.wikipedia.org/wiki/A.S._Roma</info>
+            </club>
+        </country>
+        <country name="Holanda">
+            <club name="AFC Ajax" location="Amsterdam">
+                <icon>Ajax_Amsterdam.png</icon>
+                <info>http://en.wikipedia.org/wiki/AFC_Ajax</info>
+            </club>
+            <club name="PSV" location="Eindhoven">
+                <icon>psv_eindhoven.png</icon>
+                <info>http://en.wikipedia.org/wiki/PSV_Eindhoven</info>
+            </club>
+        </country>
+        <country name="Portugal">
+            <club name="S.L. Benfica" location="Lisbon">
+                <icon>SL_Benfica.png</icon>
+                <info>http://en.wikipedia.org/wiki/S.L._Benfica</info>
+            </club>
+            <club name="FC Porto" location="Porto">
+                <icon>F.C._Porto.png</icon>
+                <info>http://en.wikipedia.org/wiki/FC_Porto</info>
+            </club>
+        </country>
+        <country name="Espanha">
+            <club name="Atlético Madrid" location="Madrid">
+                <icon>Atletico_Madrid.png</icon>
+                <info>http://en.wikipedia.org/wiki/Atl%C3%A9tico_Madrid</info>
+            </club>
+            <club name="FC Barcelona" location="Barcelona">
+                <icon>FCB.png</icon>
+                <info>http://en.wikipedia.org/wiki/FC_Barcelona</info>
+            </club>
+            <club name="Real Madrid C.F." location="Madrid">
+                <icon>Real_Madrid.png</icon>
+                <info>http://en.wikipedia.org/wiki/Real_Madrid_C.F.</info>
+            </club>
+            <club name="Sevilla FC" location="Sevilla">
+                <icon>Sevilla.png</icon>
+                <info>http://en.wikipedia.org/wiki/Sevilla_FC</info>
+            </club>
+            <club name="Valencia CF" location="Valencia">
+                <icon>Valencia.png</icon>
+                <info>http://en.wikipedia.org/wiki/Valencia_CF</info>
+            </club>
+            <club name="Villarreal CF" location="Vila-real">
+                <icon>Villarreal.png</icon>
+                <info>http://en.wikipedia.org/wiki/Villarreal_CF</info>
+            </club>
+        </country>
+        <country name="Turquia">
+            <club name="Fenerbahçe S.K." location="Istanbul">
+                <icon>Fenerbahce.png</icon>
+                <info>http://en.wikipedia.org/wiki/Fenerbah%C3%A7e_S.K.</info>
+            </club>
+            <club name="Galatasaray S.K." location="Istanbul">
+                <icon>Galatasaray.png</icon>
+                <info>http://en.wikipedia.org/wiki/Galatasaray_S.K._(football_team)</info>
+            </club>
+        </country>
+        <country name="Ucrania">
+            <club name="FC Shakhtar Donetsk" location="Donetsk">
+                <icon>FC_Shakhtar_Donetsk.png</icon>
+                <info>http://en.wikipedia.org/wiki/FC_Shakhtar_Donetsk</info>
+            </club>
+        </country>
+    </association>
+    <association name="conmebol" location="América do sul">
+        <country name="Argentina">
+            <club name="Boca Juniors" location="Buenos Aires">
+                <icon>Boca_Juniors.png</icon>
+                <info>http://en.wikipedia.org/wiki/Boca_Juniors</info>
+            </club>
+            <club name="Club Atlético River Plate" location="Buenos Aires">
+                <icon>River_Plate.png</icon>
+                <info>http://en.wikipedia.org/wiki/Club_Atl%C3%A9tico_River_Plate</info>
+            </club>
+        </country>
+        <country name="Brasil">
+            <club name="Corinthians" location="São Paulo">
+                <icon>Corinthians.png</icon>
+                <info>http://en.wikipedia.org/wiki/Sport_Club_Corinthians_Paulista</info>
+            </club>
+            <club name="Flamengo" location="Rio de Janeiro">
+                <icon>Flamengo.png</icon>
+                <info>http://en.wikipedia.org/wiki/Clube_de_Regatas_do_Flamengo</info>
+            </club>
+            <club name="Palmeiras" location="São Paulo">
+                <icon>Palmeiras.png</icon>
+                <info>http://en.wikipedia.org/wiki/Sociedade_Esportiva_Palmeiras</info>
+            </club>
+            <club name="Santos" location="Santos">
+                <icon>Santos.png</icon>
+                <info>http://en.wikipedia.org/wiki/Santos_FC</info>
+            </club>
+            <club name="São Paulo" location="São Paulo">
+                <icon>Sao_paulo_fc.png</icon>
+                <info>http://en.wikipedia.org/wiki/S%C3%A3o_Paulo_FC</info>
+            </club>
+        </country>
+    </association>
+    <!--<association name="" location="">
+        <country name="">
+            <club name="" location="">
+                <icon></icon>
+                <info></info>
+            </club>
+        </country>
+    </association>-->
+</soccerClubs>

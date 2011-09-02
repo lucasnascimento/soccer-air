@@ -1,4 +1,4 @@
-<!-- http://en.wikipedia.org/wiki/List_of_association_football_clubs -->
+ï»¿<!-- http://en.wikipedia.org/wiki/List_of_association_football_clubs -->
 <soccerClubs>
     <association name="caf" location="Africa">
         <country name="Algeria">
@@ -14,7 +14,7 @@
                 <icon>CA_Batna.jpg</icon>
                 <info>http://en.wikipedia.org/wiki/CA_Batna</info>
             </club>
-            <club name="JSM Béjaïa" location="Béjaïa">
+            <club name="JSM BÃ©jaÃ¯a" location="BÃ©jaÃ¯a">
                 <icon>JSMB.png</icon>
                 <info>http://en.wikipedia.org/wiki/JSM_B%C3%A9ja%C3%AFa</info>
             </club>
@@ -54,23 +54,17 @@
                 <icon>MC_Oran.jpg</icon>
                 <info>http://en.wikipedia.org/wiki/MC_Oran</info>
             </club>
-            <club name="MC Saïda" location="Saïda">
+            <club name="MC SaÃ¯da" location="SaÃ¯da">
                 <icon>mc_saida.jpg</icon>
                 <info>http://en.wikipedia.org/wiki/MC_Sa%C3%AFda</info>
             </club>
-            <club name="ES Sétif" location="Sétif">
+            <club name="ES SÃ©tif" location="SÃ©tif">
                 <icon>ES_Setif.png</icon>
                 <info>http://en.wikipedia.org/wiki/ES_S%C3%A9tif</info>
             </club>
             <club name="WA Tlemcen" location="Tlemcen">
                 <icon>WA_Tlemcen.png</icon>
                 <info>http://en.wikipedia.org/wiki/WA_Tlemcen</info>
-            </club>
-        </country>
-        <country name="">
-            <club name="" location="">
-                <icon></icon>
-                <info></info>
             </club>
         </country>
     </association>
@@ -105,7 +99,7 @@
                 <info>http://en.wikipedia.org/wiki/Tottenham_Hotspur_F.C.</info>
             </club>
         </country>
-        <country name="França">
+        <country name="FranÃ§a">
             <club name="Olympique Lyonnais" location="Lyon">
                 <icon>Olympique_lyonnais.png</icon>
                 <info>http://en.wikipedia.org/wiki/Olympique_Lyonnais</info>
@@ -133,7 +127,7 @@
                 <info>http://en.wikipedia.org/wiki/FC_Schalke_04</info>
             </club>
         </country>
-        <country name="Itália">
+        <country name="ItÃ¡lia">
             <club name="ACF Fiorentina" location="Florence">
                 <icon>ACF_Fiorentina.png</icon>
                 <info>http://en.wikipedia.org/wiki/ACF_Fiorentina</info>
@@ -180,7 +174,7 @@
             </club>
         </country>
         <country name="Espanha">
-            <club name="Atlético Madrid" location="Madrid">
+            <club name="AtlÃ©tico Madrid" location="Madrid">
                 <icon>Atletico_Madrid.png</icon>
                 <info>http://en.wikipedia.org/wiki/Atl%C3%A9tico_Madrid</info>
             </club>
@@ -206,7 +200,7 @@
             </club>
         </country>
         <country name="Turquia">
-            <club name="Fenerbahçe S.K." location="Istanbul">
+            <club name="FenerbahÃ§e S.K." location="Istanbul">
                 <icon>Fenerbahce.png</icon>
                 <info>http://en.wikipedia.org/wiki/Fenerbah%C3%A7e_S.K.</info>
             </club>
@@ -222,19 +216,19 @@
             </club>
         </country>
     </association>
-    <association name="conmebol" location="América do sul">
+    <association name="conmebol" location="AmÃ©rica do sul">
         <country name="Argentina">
             <club name="Boca Juniors" location="Buenos Aires">
                 <icon>Boca_Juniors.png</icon>
                 <info>http://en.wikipedia.org/wiki/Boca_Juniors</info>
             </club>
-            <club name="Club Atlético River Plate" location="Buenos Aires">
+            <club name="Club AtlÃ©tico River Plate" location="Buenos Aires">
                 <icon>River_Plate.png</icon>
                 <info>http://en.wikipedia.org/wiki/Club_Atl%C3%A9tico_River_Plate</info>
             </club>
         </country>
         <country name="Brasil">
-            <club name="Corinthians" location="São Paulo">
+            <club name="Corinthians" location="SÃ£o Paulo">
                 <icon>Corinthians.png</icon>
                 <info>http://en.wikipedia.org/wiki/Sport_Club_Corinthians_Paulista</info>
             </club>
@@ -242,7 +236,7 @@
                 <icon>Flamengo.png</icon>
                 <info>http://en.wikipedia.org/wiki/Clube_de_Regatas_do_Flamengo</info>
             </club>
-            <club name="Palmeiras" location="São Paulo">
+            <club name="Palmeiras" location="SÃ£o Paulo">
                 <icon>Palmeiras.png</icon>
                 <info>http://en.wikipedia.org/wiki/Sociedade_Esportiva_Palmeiras</info>
             </club>
@@ -250,7 +244,7 @@
                 <icon>Santos.png</icon>
                 <info>http://en.wikipedia.org/wiki/Santos_FC</info>
             </club>
-            <club name="São Paulo" location="São Paulo">
+            <club name="SÃ£o Paulo" location="SÃ£o Paulo">
                 <icon>Sao_paulo_fc.png</icon>
                 <info>http://en.wikipedia.org/wiki/S%C3%A3o_Paulo_FC</info>
             </club>
