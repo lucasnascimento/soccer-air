@@ -4,6 +4,8 @@
     <classEntry path="soccer.model.SoccerClubVO"/>
     <classEntry path="soccer.model.ManagerVO"/>
     <classEntry path="soccer.utils.SoccerClubXMLReaderUtil"/>
+    <classEntry path="soccer.view.SoccerClubListItemRenderer"/>
+    <classEntry path="soccer.utils.VectorUtil"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

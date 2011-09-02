@@ -2,24 +2,42 @@
 <s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
 					   xmlns:s="library://ns.adobe.com/flex/spark" 
 					   xmlns:mx="library://ns.adobe.com/flex/mx"
+					   styleName="newTournamentStyle"
 					   creationComplete="windowedapplication1_creationCompleteHandler(event)">
 	<fx:Script>
 		<![CDATA[
 			import mx.events.FlexEvent;
+			import mx.managers.PopUpManager;
 			
 			import soccer.model.SoccerClubVO;
 			import soccer.utils.SoccerClubXMLReaderUtil;
-			
+			import soccer.view.NewTournamentView;
+
+			protected var clubs:Vector.<SoccerClubVO>;
+
 			protected function windowedapplication1_creationCompleteHandler( event:FlexEvent ):void {
 				SoccerClubXMLReaderUtil.loadAndParseXML( "soccer/assets/clubs.xml", soccerClubXMLCallback );
 			}
 
 			protected function soccerClubXMLCallback( clubs:Vector.<SoccerClubVO> ):void {
-				
+				this.clubs = clubs;
+			}
+
+			protected function tempButton_clickHandler( event:MouseEvent ):void {
+				var view:NewTournamentView = new NewTournamentView();
+				view.setClubs( clubs );
+
+				PopUpManager.addPopUp( view, this );
+				PopUpManager.centerPopUp( view );
 			}
 		]]>
 	</fx:Script>
+	<fx:Style source="soccer/assets/style.css" />
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
+	
+
+	<!-- temporario, apenas para visualizar as telas -->
+	<s:Button id="tempButton" label="Novo Campeonato" click="tempButton_clickHandler(event)" />
 </s:WindowedApplication>
