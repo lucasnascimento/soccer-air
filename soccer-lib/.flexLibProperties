@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
   <includeClasses>
-    <classEntry path="soccer.model.SoccerClubVO"/>
-    <classEntry path="soccer.model.ManagerVO"/>
+    <classEntry path="soccer.model.Club"/>
+    <classEntry path="soccer.model.Manager"/>
     <classEntry path="soccer.utils.SoccerClubXMLReaderUtil"/>
+    <classEntry path="soccer.model.Tournament"/>
+    <classEntry path="soccer.model.SingleMatch"/>
+    <classEntry path="soccer.model.Groups"/>
+    <classEntry path="soccer.model.IPhase"/>
+    <classEntry path="soccer.model.Edition"/>
+    <classEntry path="soccer.model.Team"/>
+    <classEntry path="soccer.model.Classification"/>
+    <classEntry path="soccer.model.GroupedPhase"/>
+    <classEntry path="soccer.model.MatchPhase"/>
+    <classEntry path="soccer.model.TwoWayMatch"/>
+    <classEntry path="soccer.model.IMatch"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

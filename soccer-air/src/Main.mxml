@@ -7,14 +7,14 @@
 		<![CDATA[
 			import mx.events.FlexEvent;
 			
-			import soccer.model.SoccerClubVO;
+			import soccer.model.Club;
 			import soccer.utils.SoccerClubXMLReaderUtil;
 			
 			protected function windowedapplication1_creationCompleteHandler( event:FlexEvent ):void {
 				SoccerClubXMLReaderUtil.loadAndParseXML( "soccer/assets/clubs.xml", soccerClubXMLCallback );
 			}
 
-			protected function soccerClubXMLCallback( clubs:Vector.<SoccerClubVO> ):void {
+			protected function soccerClubXMLCallback( clubs:Vector.<Club> ):void {
 				
 			}
 		]]>

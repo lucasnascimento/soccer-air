@@ -6,7 +6,7 @@ package soccer.utils {
 	import flash.net.URLRequest;
 	import flash.utils.Dictionary;
 	
-	import soccer.model.SoccerClubVO;
+	import soccer.model.Club;
 
 	public class SoccerClubXMLReaderUtil {
 		protected static var map:Dictionary = new Dictionary();
@@ -22,10 +22,10 @@ package soccer.utils {
 		}
 
 		protected static function onXMLComplete( event:Event ):void {
-			var clubs:Vector.<SoccerClubVO> = new Vector.<SoccerClubVO>();
+			var clubs:Vector.<Club> = new Vector.<Club>();
 			var loader:URLLoader = event.currentTarget as URLLoader;
 			var xml:XML = new XML( loader.data );
-			var clubVO:SoccerClubVO, associationName:String, associationLocation:String;
+			var clubVO:Club, associationName:String, associationLocation:String;
 			var countryName:String, clubsLength:uint;
 			var callback:Function = map[ loader ];
 
@@ -37,7 +37,7 @@ package soccer.utils {
 					countryName = country.@name;
 
 					for each( var club:XML in country.club ) {
-						clubs[ clubsLength ] = new SoccerClubVO( club.@name, club.@location, club.icon, club.info, countryName, associationName, associationLocation );
+						clubs[ clubsLength ] = new Club( club.@name, club.@location, club.icon, club.info, countryName, associationName, associationLocation );
 						clubsLength++;
 					}
 				}

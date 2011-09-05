@@ -1,5 +1,5 @@
 package soccer.model {
-	public class SoccerClubVO {
+	public class Club {
 		public var name:String;
 		public var location:String;
 		public var icon:String;
@@ -9,7 +9,7 @@ package soccer.model {
 		public var associationName:String;
 		public var associationLocation:String;
 
-		public function SoccerClubVO( name:String = null, location:String = null, icon:String = null, info:String = null, country:String = null, associationName:String = null, associationLocation:String = null ) {
+		public function Club( name:String = null, location:String = null, icon:String = null, info:String = null, country:String = null, associationName:String = null, associationLocation:String = null ) {
 			this.name     = name;
 			this.location = location;
 			this.icon     = icon;
