@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Panel xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 styleName="newTournamentStyle"
+		 title="Criar Novo Campeonato"
+		 width="400" height="300">
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			
+			import soccer.model.Club;
+			import soccer.model.Manager;
+			import soccer.model.Club;
+			import soccer.utils.VectorUtil;
+
+			private var _clubs:Array;
+			public var managers:Vector.<Manager>;
+			public var numVisibleItems:uint    = 5;
+			public var itemsHeight:Number      = 80;
+			public var autoCompleteTime:Number = 100; //em milisegundos
+
+			[Bindable]
+			protected var clubsCollection:ArrayCollection;
+			[Bindable]
+			protected var managersCollection:ArrayCollection;
+
+			private var _autoCompleteID:uint;
+			private var _lastSearchedText:String;
+
+			public function setClubs( value:Vector.<Club> ):void {
+				_clubs = VectorUtil.toArray( value );
+			}
+
+			override protected function createChildren():void {
+				super.createChildren();
+
+				managers = new Vector.<Manager>();
+				
+				managersCollection = new ArrayCollection();
+				clubsCollection = new ArrayCollection( _clubs );
+				clubsCollection.filterFunction = filterClubs;
+				updateListHeight();
+			}
+			
+			protected function filterClubs( club:Club ):Boolean {
+				var clubName:String = club.name.toLocaleUpperCase();
+				var search:String   = tiClub.text.toLocaleUpperCase();
+				return clubName.indexOf( search ) >= 0;
+			}
+
+			protected function tiClub_keyUpHandler( event:KeyboardEvent ):void {
+				clearTimeout( _autoCompleteID );
+				if( event.keyCode == Keyboard.ENTER ) {
+					addCurrentManagerInfo();
+				} else if( _lastSearchedText != tiClub.text ) {
+					_autoCompleteID = setTimeout( refreshClubsCollection, autoCompleteTime );
+				}
+			}
+			
+			protected function refreshClubsCollection():void {
+				clubsCollection.refresh();
+				if( clubsCollection.length > 0 ) {
+					lstClubs.selectedIndex = 0;
+				}
+				lstClubs.visible  = tiClub.text.length > 0 && clubsCollection.length > 0;
+				_lastSearchedText = tiClub.text;
+			}
+
+			protected function updateListHeight():void {
+				if( clubsCollection.length > numVisibleItems ) {
+					lstClubs.height = numVisibleItems * itemsHeight;
+				} else {
+					lstClubs.height = clubsCollection.length * itemsHeight; 
+				}
+			}
+			
+			protected function btnAddManager_clickHandler( event:MouseEvent):void {
+				addCurrentManagerInfo();
+			}
+
+			protected function lstClubs_clickHandler( event:MouseEvent ):void {
+				addCurrentManagerInfo();
+			}
+
+			protected function managersListLabelFunction( manager:Manager ):String {
+				//TODO: atualizar todos os itens ao reordenar
+				var rank:int = managersCollection.getItemIndex( manager ) + 1;
+				return rank + ") " + manager.name + "/" + manager.favoriteClub.name;
+			}
+
+			protected function addCurrentManagerInfo():void {
+				//TODO: validação dos dados
+				var manager:Manager = new Manager( tiManager.text, lstClubs.selectedItem as Club );
+				managersCollection.addItem( manager );
+
+				tiManager.setFocus();
+				tiManager.text = tiClub.text = "";
+				refreshClubsCollection();
+			}
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<!-- Manter esta ordem para que a lista de auto complete se mantenha sobre a lista de treinadores -->
+	<s:Group x="200" y="10">
+		<s:layout>
+			<s:VerticalLayout />
+		</s:layout>
+		<s:Label text="Lista de Treinadores" />
+		<s:List id="lstManagers"
+				labelFunction="managersListLabelFunction"
+				width="180" height="200" dataProvider="{managersCollection}"
+				dropEnabled="true" dragMoveEnabled="true" 
+				dragEnabled="true" allowMultipleSelection="true" />
+		<s:Button label="Avançar" />
+	</s:Group>
+	<s:Group x="10" y="10">
+		<s:layout>
+			<s:VerticalLayout />
+		</s:layout>
+		<s:Label text="Treinador" />
+		<s:TextInput id="tiManager" width="165" />
+		<s:Label text="Clube" />
+		<s:Group>
+			<s:layout>
+				<s:HorizontalLayout />
+			</s:layout>
+			<s:TextInput id="tiClub" width="120" keyUp="tiClub_keyUpHandler(event)" />
+			<s:Button id="btnAddManager" width="40" label="Ok" click="btnAddManager_clickHandler(event)" />
+		</s:Group>
+		<s:List id="lstClubs" visible="false" width="400" dataProvider="{clubsCollection}"
+			click="lstClubs_clickHandler(event)"
+			itemRenderer="soccer.view.SoccerClubListItemRenderer" />
+	</s:Group>
+</s:Panel>

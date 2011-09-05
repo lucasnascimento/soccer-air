@@ -1,4 +1,6 @@
 package soccer.model {
+
+	[Bindable]
 	public class Club {
 		public var name:String;
 		public var location:String;

@@ -1,0 +1,15 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+
+.newTournamentStyle {
+	
+}
+
+.itemListTitle {
+	fontSize: 20;
+}
+
+.itemListDescription {
+	fontSize: 16;
+}
