@@ -8,10 +8,11 @@
 	<fx:Script>
 		<![CDATA[
 			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.events.DragEvent;
 			
 			import soccer.model.Club;
 			import soccer.model.Manager;
-			import soccer.model.Club;
 			import soccer.utils.VectorUtil;
 
 			private var _clubs:Array;
@@ -38,11 +39,12 @@
 				managers = new Vector.<Manager>();
 				
 				managersCollection = new ArrayCollection();
+
 				clubsCollection = new ArrayCollection( _clubs );
 				clubsCollection.filterFunction = filterClubs;
 				updateListHeight();
 			}
-			
+
 			protected function filterClubs( club:Club ):Boolean {
 				var clubName:String = club.name.toLocaleUpperCase();
 				var search:String   = tiClub.text.toLocaleUpperCase();
@@ -55,6 +57,27 @@
 					addCurrentManagerInfo();
 				} else if( _lastSearchedText != tiClub.text ) {
 					_autoCompleteID = setTimeout( refreshClubsCollection, autoCompleteTime );
+				}
+			}
+			
+			protected function tiClub_keyDownHandler( event:KeyboardEvent ):void {
+				if( lstClubs.selectedItem != null && ( event.keyCode == Keyboard.UP || event.keyCode == Keyboard.DOWN ) ) {
+					var length:uint = clubsCollection.length;
+
+					if( event.keyCode == Keyboard.UP ) {
+						if( lstClubs.selectedIndex > 0 ) {
+							lstClubs.selectedIndex--;
+						} else {
+							lstClubs.selectedIndex = length - 1;
+						}
+					} else if( event.keyCode == Keyboard.DOWN ) {
+						if( lstClubs.selectedIndex < length - 1 ) {
+							lstClubs.selectedIndex++;
+						} else {
+							lstClubs.selectedIndex = 0;
+						}
+					}
+					lstClubs.ensureIndexIsVisible( lstClubs.selectedIndex );
 				}
 			}
 			
@@ -76,7 +99,7 @@
 			}
 			
 			protected function btnAddManager_clickHandler( event:MouseEvent):void {
-				addCurrentManagerInfo();
+				addCurrentManagerInfo( true );
 			}
 
 			protected function lstClubs_clickHandler( event:MouseEvent ):void {
@@ -84,19 +107,44 @@
 			}
 
 			protected function managersListLabelFunction( manager:Manager ):String {
-				//TODO: atualizar todos os itens ao reordenar
 				var rank:int = managersCollection.getItemIndex( manager ) + 1;
 				return rank + ") " + manager.name + "/" + manager.favoriteClub.name;
 			}
 
-			protected function addCurrentManagerInfo():void {
-				//TODO: validação dos dados
-				var manager:Manager = new Manager( tiManager.text, lstClubs.selectedItem as Club );
-				managersCollection.addItem( manager );
+			protected function addCurrentManagerInfo( showError:Boolean = false ):void {
+				var name:String = tiManager.text == "" ? null : tiManager.text;
+				var club:String = tiClub.text    == "" ? null : tiManager.text;
+				var manager:Manager = new Manager( name, lstClubs.selectedItem as Club );
+				
+				if( name != null && club != null ) {
+					managersCollection.addItem( manager );
 
-				tiManager.setFocus();
-				tiManager.text = tiClub.text = "";
-				refreshClubsCollection();
+					tiManager.setFocus();
+					tiManager.text = tiClub.text = "";
+					refreshClubsCollection();
+				} else if( name == null ) {
+					if( showError ) {
+						Alert.show( "Por favor complete o nome do treinador.", "Criação de torneio" );
+					}
+					tiManager.setFocus();
+				} else if( club == null ) {
+					if( showError ) {
+						Alert.show( "Por favor complete o clube.", "Criação de torneio" );
+					}
+					tiClub.setFocus();
+				}
+			}
+			
+			protected function lstManagers_dragCompleteHandler( event:DragEvent ):void {
+				managersCollection.refresh();
+			}
+			
+			protected function lstManagers_doubleClickHandler( event:MouseEvent ):void {
+				var manager:Manager = lstManagers.selectedItem as Manager;
+				if( manager != null ) {
+					tiManager.text = manager.name;
+					tiClub.text    = manager.favoriteClub.name;
+				}
 			}
 		]]>
 	</fx:Script>
@@ -112,8 +160,10 @@
 		<s:List id="lstManagers"
 				labelFunction="managersListLabelFunction"
 				width="180" height="200" dataProvider="{managersCollection}"
-				dropEnabled="true" dragMoveEnabled="true" 
-				dragEnabled="true" allowMultipleSelection="true" />
+				doubleClickEnabled="true" doubleClick="lstManagers_doubleClickHandler(event)"
+				dropEnabled="true" dragMoveEnabled="true"
+				dragEnabled="true" allowMultipleSelection="true" 
+				dragComplete="lstManagers_dragCompleteHandler(event)" />
 		<s:Button label="Avançar" />
 	</s:Group>
 	<s:Group x="10" y="10">
@@ -127,7 +177,7 @@
 			<s:layout>
 				<s:HorizontalLayout />
 			</s:layout>
-			<s:TextInput id="tiClub" width="120" keyUp="tiClub_keyUpHandler(event)" />
+			<s:TextInput id="tiClub" width="120" keyUp="tiClub_keyUpHandler(event)" keyDown="tiClub_keyDownHandler(event)" />
 			<s:Button id="btnAddManager" width="40" label="Ok" click="btnAddManager_clickHandler(event)" />
 		</s:Group>
 		<s:List id="lstClubs" visible="false" width="400" dataProvider="{clubsCollection}"
